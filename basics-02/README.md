@@ -10,13 +10,38 @@ You're welcome to work in groups or individually. Remember to have some fun! Mak
 
 **Note: These labs are *designed* to be long! You shouldn't be able to finish all the problems in one class period. Work through as much as you can in the time allotted, but also feel free to skip from question to question freely. The extra problems are intended to be extra practice, if you want to hone your Python skills even more.**
 
-Above all, have fun playing with Python! Enjoy.
+Above all, have fun playing with Python/Java/Cpp! Enjoy.
 
 ## Warming Up
 
 ### Hello World
 
 If you haven’t already, write a Hello World program which consists of getting Python to print `"Hello, World!"` to the console. First, write this program using the interactive interpreter. Next, put the body of the program into a file named `hello.py`, and run the Hello World program as a Python script.
+
+### Conditionals
+
+Get two integers from the user.
+
+Then,   display a message if the first integer is:
+
+* less than,
+* equal to,   or
+* greater than
+
+the second integer.
+
+
+1. Test the condition   for each case separately,   so that   all three comparison operators are used   in the code. 
+2. Test the condition with switch case
+3. Test the condition with the nesting conditional 
+
+### Loop
+Start an integer value at   **1024**.
+
+Loop while it is greater than zero.
+
+Print the value (with a newline) and divide it by two each time through the loop. 
+
 
 ### Printing
 
