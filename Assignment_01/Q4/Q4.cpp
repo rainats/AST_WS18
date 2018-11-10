@@ -2,7 +2,9 @@
 #include<math.h>
 #include<iomanip>
 #include<cstdio>
+#include<limits>
 
+//Check the validity of radius as an input
 int isValid_r(int radius)
 {
 	bool state = false;
@@ -16,26 +18,30 @@ int isValid_r(int radius)
 		else
 		{
 			std::cin.clear();
-            std::cin.ignore(256,'\n');
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
         	std::cout << "Not a suitable input. Please enter the radius of the circle : " << std::endl;
 		}
 	}
 	return radius;	
 }
 
+//Check the validity of precision as an input, if it is not valid, use default precision
 int isValid_p(int precision)
 {
 	std::cin >> precision;
-	if(std::cin.fail())
+	if(std::cin.fail() || precision>15)
 	{
-		std::cout << "Not a suitable input. Using default maximum precision (20)" << std::endl;
-		precision = 20;
+		std::cout << "Not a suitable input. Using default maximum precision (15)" << std::endl;
+		precision = 15;
 	}
 	return precision;
 }
 
-void Iteration(int radius,int precision,long double area,long double circ,long double incr_area,long double incr_circ,long double old_area,long double old_circ, double pi,double pi_)
+//Printing tables for area and circumference of circle
+void Iteration(int radius,int precision)
 {
+	long double area, circ, incr_area=0, incr_circ=0, old_area, old_circ;
+	double pi = M_PIl, pi_;
 
 	std::cout << std::setw(5) << "Precision" << std::setw(35) << "pi" << std::setw(35) << "Area of a circle" << std::setw(35) << "Increase perentage of area" << std::setw(35) << "Circumference  " << std::setw(30) << "Increase percentage of Circumference" << std::setw(40) <<"\t" << std::endl;
 	std::cout << std::setw(10) << "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" << std::setw(200) << "\t" << std::endl;
@@ -64,14 +70,12 @@ int main()
 	int radius = 0;
 	int precision = 0;
 	bool isValid = false;
-	long double area, circ, incr_area=0, incr_circ=0, old_area, old_circ;
-	double pi = M_PIl, pi_;
-
+	
 	std::cout << "Please enter the radius of the circle : " << std::endl;
 	radius = isValid_r(radius);
 
 	std::cout << "Please enter the maximum precision : " << std::endl;
 	precision = isValid_p(precision);
-	
-	Iteration(radius, precision, area, circ, incr_area, incr_circ, old_area, old_circ, pi, pi_);
+
+	Iteration(radius, precision);
 }
