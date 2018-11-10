@@ -27,7 +27,7 @@ void prime_num(long int max_long_int, int max_int)
 	}
 }
 
-int count_int(int min_int, int max_int)
+long int count_int(int min_int, int max_int)
 {
 	int count=0;
 	for(int i=min_int; i<=max_int; i++)
@@ -37,7 +37,7 @@ int count_int(int min_int, int max_int)
 	return count;
 }
 
-int count_long_int(int min_long_int, int max_long_int)
+long long int count_long_int(int min_long_int, int max_long_int)
 {
 	int count=0;
 	for(int i=min_long_int; i<=max_long_int; i++)
@@ -50,7 +50,7 @@ int count_long_int(int min_long_int, int max_long_int)
 std::tuple<int,double> time_counter(long int min, long int max)
 {
 	std::clock_t start;
-	int counter;
+	long long int counter;
 	double duration;
 	//Counter for integers
 	if(max == std::numeric_limits<int>::max())
@@ -77,7 +77,7 @@ int main()
 	long int min_long_int = std::numeric_limits<long int>::min();
 	long int max_long_int = std::numeric_limits<long int>::max();
 	double duration_int, duration_long_int;
-	int counter_int, counter_long_int;
+	long long int counter_int, counter_long_int;
 	
 	std::cout << std::setw(10) << "Prime number integer" << std::setw(5) << "|" << std::setw(5) << "Prime number long integer" << "\t" << std::endl;
 	std::cout << std::setw(10) << "---------------------------------------------------" << std::setw(51) << "\t" << std::endl;
