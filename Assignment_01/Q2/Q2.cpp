@@ -27,6 +27,8 @@ void prime_num(long int max_long_int, int max_int)
 	}
 }
 
+
+// Counts the number of integers
 long int count_int(int min_int, int max_int)
 {
 	int count=0;
@@ -37,6 +39,7 @@ long int count_int(int min_int, int max_int)
 	return count;
 }
 
+// Counts the number of long integers
 long long int count_long_int(int min_long_int, int max_long_int)
 {
 	int count=0;
@@ -47,6 +50,7 @@ long long int count_long_int(int min_long_int, int max_long_int)
 	return count;
 }
 
+// Duration for program to count number of integer or long integers
 std::tuple<int,double> time_counter(long int min, long int max)
 {
 	std::clock_t start;
