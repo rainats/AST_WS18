@@ -5,7 +5,7 @@
 #include<limits>
 #include<vector>
 #include<ctime>
-#include <tuple>
+#include<tuple>
 
 void prime_num(long int max_long_int, int max_int)
 {
@@ -53,7 +53,7 @@ std::tuple<int,double> time_counter(long int min, long int max)
 	int counter;
 	double duration;
 	//Counter for integers
-	if(max == 100)//std::numeric_limits<int>::max())
+	if(max == std::numeric_limits<int>::max())
 	{
 		start = std::clock();
 		counter = count_int(min, max);
@@ -72,10 +72,10 @@ std::tuple<int,double> time_counter(long int min, long int max)
 
 int main()
 {
-	int min_int = 0;//std::numeric_limits<int>::min();
-	int max_int = 100;//std::numeric_limits<int>::max();
-	long int min_long_int = 0;//std::numeric_limits<long int>::min();
-	long int max_long_int = 100;//std::numeric_limits<long int>::max();
+	int min_int = std::numeric_limits<int>::min();
+	int max_int = std::numeric_limits<int>::max();
+	long int min_long_int = std::numeric_limits<long int>::min();
+	long int max_long_int = std::numeric_limits<long int>::max();
 	double duration_int, duration_long_int;
 	int counter_int, counter_long_int;
 	
