@@ -4,6 +4,11 @@
 #include<cstdio>
 #include<limits>
 
+//Constructors
+int isValid_r(std::istream& stream);
+int isValid_p(std::istream& stream);
+bool Iteration(int radius,int precision);
+
 //Check the validity of radius as an input
 int isValid_r(std::istream& stream)
 {
@@ -40,10 +45,11 @@ int isValid_p(std::istream& stream)
 }
 
 //Printing tables for area and circumference of circle
-void Iteration(int radius,int precision)
+bool Iteration(int radius,int precision)
 {
 	long double area, circ, incr_area=0, incr_circ=0, old_area, old_circ;
 	double pi = M_PIl, pi_;
+	bool isRun = false;
 
 	std::cout << std::setw(5) << "Precision" << std::setw(35) << "pi" << std::setw(35) << "Area of a circle" << std::setw(35) << "Increase perentage of area" << std::setw(35) << "Circumference  " << std::setw(30) << "Increase percentage of Circumference" << std::setw(40) <<"\t" << std::endl;
 	std::cout << std::setw(10) << "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" << std::setw(200) << "\t" << std::endl;
@@ -65,13 +71,17 @@ void Iteration(int radius,int precision)
 		old_area = area;
 		old_circ = circ;
 	}
+
+	//Indicator procedure had been completed
+	isRun = true;
+	return isRun;
 }
 
 int main()
 {
 	int radius = 0;
 	int precision = 0;
-	bool isValid = false;
+	bool isRun = false;
 	
 	std::cout << "Please enter the radius of the circle : " << std::endl;
 	radius = isValid_r(std::cin);
@@ -79,5 +89,5 @@ int main()
 	std::cout << "Please enter the maximum precision : " << std::endl;
 	precision = isValid_p(std::cin);
 
-	Iteration(radius, precision);
+	isRun = Iteration(radius, precision);
 }
