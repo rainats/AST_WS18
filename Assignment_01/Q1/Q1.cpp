@@ -3,15 +3,17 @@
 #include <iostream>
 #include <limits>
 
+using namespace std ;
+
 long add( int [], int );
 long multiply (int [], int );
 int var_calc(int [], int , int );
 int small_calc(int [] , int );
 int large_calc(int [] , int );
 void calculator(int , int );
-int read_int_input(int , int );
+int read_int_input(int , int , istream& stream);
 
-using namespace std ;
+
 
 void calculator(int lower, int upper)
 {
@@ -20,14 +22,14 @@ void calculator(int lower, int upper)
 
   int input_int = 0;
   cout << "Input an integer between "<< lower << " and " << upper << endl;
-  input_int = read_int_input(lower , upper);
+  input_int = read_int_input(lower , upper , cin);
 
 // 2. It then reads n more integers and stores them.
   int arr[input_int] = {};
   cout<< "Input "<< input_int << " integers between "<< lower << " and " << upper << endl ;
   for (int i = 0; i < input_int; i++)
   {
-    arr[i] = read_int_input(lower , upper);
+    arr[i] = read_int_input(lower , upper , cin);
   }
 
 
@@ -120,21 +122,21 @@ int large_calc(int arr[], int size)
 
 
 //Reading Integer Inputs
-int read_int_input(int lower, int upper)
+int read_int_input(int lower, int upper, istream& stream)
 {
   int input = 0;
   bool valid = false;
   do
   {
-    cin >> input;
-    if (cin.good() && lower <= input &&  input<= upper)
+    stream >> input;
+    if (stream.good() && lower <= input &&  input<= upper)
     {
       valid =  true;
     }
     else
     {
-      cin.clear();
-      cin.ignore(numeric_limits<streamsize>::max(),'\n');
+      stream.clear();
+      stream.ignore(numeric_limits<streamsize>::max(),'\n');
       cout<< "Invalid entry ! Please re-enter the number "<<endl;
     }
   }
