@@ -1,3 +1,5 @@
+// Program needs to be compiled by C++ 11th version, use -std=c++11 to compile
+
 #include<iostream>
 #include<math.h>
 #include<stdio.h>
@@ -115,6 +117,7 @@ void print_table(int arr_1[],float arr_2[],string arr_3[],int arr_4[],string arr
   {
     cout << setw(25) <<i << setw(25) << arr_1[i] << setw(28) << arr_2[i] << setw(27) << arr_3[i] << setw(25) << arr_4[i] << setw(25) << arr_5[i] << setw(25) << arr_6[i]<<"\n";
   }
+  
 }
 
 int main()

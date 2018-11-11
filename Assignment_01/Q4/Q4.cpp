@@ -53,12 +53,12 @@ bool Iteration(int radius,int precision)
 
 	std::cout << std::setw(5) << "Precision" << std::setw(35) << "pi" << std::setw(35) << "Area of a circle" << std::setw(35) << "Increase perentage of area" << std::setw(35) << "Circumference  " << std::setw(30) << "Increase percentage of Circumference" << std::setw(40) <<"\t" << std::endl;
 	std::cout << std::setw(10) << "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" << std::setw(200) << "\t" << std::endl;
-	
+
 	// Initialize for the first value
 	old_area = 3 * radius * radius;
 	old_circ = 2 * 3 * radius;
 	std::cout << std::setw(5) << 0 << std::setw(35) << 3 << std::setw(35) << old_area << std::setw(35) << 0 << std::setw(35) << old_circ << std::setw(35) << 0 << std::setw(35) << "\t" << std::endl;
-	
+
 	// Iteration for next values
 	for(int i=1; i<=precision; i++)
 	{
@@ -82,7 +82,7 @@ int main()
 	int radius = 0;
 	int precision = 0;
 	bool isRun = false;
-	
+
 	std::cout << "Please enter the radius of the circle : " << std::endl;
 	radius = isValid_r(std::cin);
 

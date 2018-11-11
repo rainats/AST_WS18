@@ -160,13 +160,13 @@ SCENARIO("TestingCalculatorProcedure", "Prints output from functions" ){
 	{
 		int sum = 0;
 		int arr[3] = {3,3,3};
-    	int size = 3;
-		
-		WHEN("Calculator is run")
+    int size = 3;
+
+	  WHEN("Calculator is run")
 		{
 			calculator(1,100, cin);
 
-			THEN("Variable changed values")
+	    THEN("Variable changed values")
 			{
 				REQUIRE( add(arr,size) == 9 );
 			}
