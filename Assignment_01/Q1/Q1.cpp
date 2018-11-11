@@ -7,21 +7,20 @@ using namespace std ;
 
 long add( int [], int );
 long multiply (int [], int );
-int var_calc(int [], long , int );
+int var_calc(int [], int , int );
 int small_calc(int [] , int );
 int large_calc(int [] , int );
-long* calculator(int , int );
+void calculator(int , int );
 int read_int_input(int , int , istream& stream);
 
 
 
-long* calculator(int lower, int upper)
+void calculator(int lower, int upper)
 {
 // 1. It first inputs an integer between 1 and 100 from the user.
 // Let’s assume the user inputs n.
 
   int input_int = 0;
-  static long parameters[6] = {};
   cout << "Input an integer between "<< lower << " and " << upper << endl;
   input_int = read_int_input(lower , upper , cin);
 
@@ -36,12 +35,12 @@ long* calculator(int lower, int upper)
 
 // 3. It computes the sum, the product, the average, the variance,
 // the smallest and the largest value of these numbers.
-  parameters[0] = add(arr , input_int); //sum
-  parameters[1] = multiply(arr , input_int); //product
-  parameters[2] = parameters[0]/input_int; //average
-  parameters[3] = var_calc(arr, parameters[2], input_int); //variance
-  parameters[4] = small_calc(arr , input_int); //smallest
-  parameters[5] = large_calc(arr , input_int); //largest
+  long sum = add(arr , input_int);
+  long product = multiply(arr , input_int);
+  int average = sum/input_int;
+  int variance = var_calc(arr, average, input_int);
+  int smallest = small_calc(arr , input_int);
+  int largest = large_calc(arr , input_int);
 
 
 // 4. It outputs, in a nicely formatted way, all the numbers
@@ -52,16 +51,14 @@ long* calculator(int lower, int upper)
     cout<< arr[i] << " ";
   }
   cout<< endl;
-  cout<< "Sum : "<< parameters[0] << endl;
-  cout<< "Product : "<< parameters[1] << endl;
-  cout<< "Average : "<< parameters[2] << endl;
-  cout<< "Variance : "<< parameters[3] << endl;
-  cout<< "Smallest number : "<< parameters[4] << endl;
-  cout<< "Largest number : "<< parameters[5] << endl;
+  cout<< "Sum : "<< sum << endl;
+  cout<< "Product : "<< product << endl;
+  cout<< "Average : "<< average << endl;
+  cout<< "Variance : "<< variance << endl;
+  cout<< "Smallest number : "<< smallest << endl;
+  cout<< "Largest number : "<< largest << endl;
 
-  return parameters;
 }
-
 
 // Finding the sum
 long add( int arr[], int size)
@@ -84,7 +81,7 @@ long multiply (int arr[], int size)
 
 
 // Finding the variance
-int var_calc(int arr[], long avg , int size)
+int var_calc(int arr[], int avg , int size)
 {
   int variance = 0;
   for (int i = 0; i < size; i++)
