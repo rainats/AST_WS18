@@ -5,31 +5,33 @@
 #include<limits>
 
 //Check the validity of radius as an input
-int isValid_r(int radius)
+int isValid_r(std::istream& stream)
 {
-	bool state = false;
-	while(!state)
-	{
-		std::cin >> radius;
-		if(!std::cin.fail() && (std::cin.peek()==EOF || std::cin.peek()=='\n'))
-		{
-			state = true;
-		}
-		else
-		{
-			std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-        	std::cout << "Not a suitable input. Please enter the radius of the circle : " << std::endl;
-		}
-	}
-	return radius;	
+    bool state = false;
+    int radius;
+    while(!state)
+    {
+        stream >> radius;
+        if(!stream.fail() && (stream.peek()==EOF || stream.peek()=='\n'))
+        {
+            state = true;
+        }
+        else
+        {
+            stream.clear();
+            stream.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+            std::cout << "Not a suitable input. Please enter the radius of the circle : " << std::endl;
+        }
+    }
+   	return radius;
 }
 
 //Check the validity of precision as an input, if it is not valid, use default precision
-int isValid_p(int precision)
+int isValid_p(std::istream& stream)
 {
-	std::cin >> precision;
-	if(std::cin.fail() || precision>15)
+	int precision;
+	stream >> precision;
+	if(stream.fail() || precision>15)
 	{
 		std::cout << "Not a suitable input. Using default maximum precision (15)" << std::endl;
 		precision = 15;
@@ -72,10 +74,10 @@ int main()
 	bool isValid = false;
 	
 	std::cout << "Please enter the radius of the circle : " << std::endl;
-	radius = isValid_r(radius);
+	radius = isValid_r(std::cin);
 
 	std::cout << "Please enter the maximum precision : " << std::endl;
-	precision = isValid_p(precision);
+	precision = isValid_p(std::cin);
 
 	Iteration(radius, precision);
 }
