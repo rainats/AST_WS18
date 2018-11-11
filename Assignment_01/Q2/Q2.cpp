@@ -7,8 +7,15 @@
 #include<ctime>
 #include<tuple>
 
-void prime_num(long int max_long_int, int max_int)
+//Constructors
+bool prime_num(long int max_long_int, int max_int);
+long int count_int(int min_int, int max_int);
+long long int count_long_int(int min_long_int, int max_long_int);
+std::tuple<int,double> time_counter(long int min, long int max);
+
+bool prime_num(long int max_long_int, int max_int)
 {
+    bool isRun = false;
     //Check prime numbers and prints
     for(long int i=2; i<=max_long_int; i++)
 	{
@@ -19,14 +26,15 @@ void prime_num(long int max_long_int, int max_int)
 			else if(i == j+1)
 			{
 				if(i>max_int)
-					std::cout << std::setw(10) << '-' << std::setw(5) << "|" << std::setw(5) << i << "\t" << std::endl;
+					std::cout << std::setw(10) << '-' << std::setw(20) << "|" << std::setw(10) << i << std::setw(20) << "\t" << std::endl;
 				else
-					std::cout << std::setw(10) << i << std::setw(5) << "|" << std::setw(5) << i << "\t" << std::endl;
+					std::cout << std::setw(10) << i << std::setw(20) << "|" << std::setw(10) << i << std::setw(20) << "\t" << std::endl;
 			}
 		}
 	}
+	isRun = true;
+	return isRun;
 }
-
 
 // Counts the number of integers
 long int count_int(int min_int, int max_int)
@@ -50,7 +58,6 @@ long long int count_long_int(int min_long_int, int max_long_int)
 	return count;
 }
 
-// Duration for program to count number of integer or long integers
 std::tuple<int,double> time_counter(long int min, long int max)
 {
 	std::clock_t start;
@@ -82,12 +89,15 @@ int main()
 	long int max_long_int = std::numeric_limits<long int>::max();
 	double duration_int, duration_long_int;
 	long long int counter_int, counter_long_int;
+	bool isRun;
 	
-	std::cout << std::setw(10) << "Prime number integer" << std::setw(5) << "|" << std::setw(5) << "Prime number long integer" << "\t" << std::endl;
-	std::cout << std::setw(10) << "---------------------------------------------------" << std::setw(51) << "\t" << std::endl;
+	std::cout << std::setw(10) << "Prime number integer" << std::setw(20) << "|" << std::setw(10) << "Prime number long integer" << "\t" << std::endl;
+	std::cout << std::setw(10) << "======================================================================================================================================================================================================" << std::setw(180) << "\t" << std::endl;
     
-    prime_num(max_long_int, max_int);
+    //Prints table
+    isRun = prime_num(max_long_int, max_int);
 	
+	// Duration for program to count number of integer or long integers
 	auto t_int = time_counter(min_int,max_int);
 	counter_int = std::get<0>(t_int);
 	duration_int = std::get<1>(t_int);
