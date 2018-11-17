@@ -1,2 +1,0 @@
-https://stackoverflow.com/questions/16934183/integer-validation-for-input
-https://github.com/haarcuba/cpp-text-table
