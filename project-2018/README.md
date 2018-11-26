@@ -58,7 +58,7 @@ differnent modalities passed through different algorithms.
 
 ## Requirements:
 
-1. Nov 27
+1. Nov 27 : [initial_requirement.md](Intial Requirement)
 2. Dec 4
 3. Dec 11
 4. Dec 18
@@ -67,11 +67,12 @@ differnent modalities passed through different algorithms.
 7. Jan 15
 8. Jan 22 : Final Project Presentation
 
-Reference:
+## Reference:
 [1] Thoduka S., Pazekha S., Moriarty A., Kraetzschmar G.K. (2017) RGB-D-Based
 Features for Recognition of Textureless Objects. In: Behnke S., Sheh R., Sarıel
 S., Lee D. (eds) RoboCup 2016: Robot World Cup XX. RoboCup 2016. Lecture Notes
 in Computer Science, vol 9776. Springer, Cham
+
 [2] MobileNets: Efficient Convolutional Neural Networks for Mobile Vision
 Applications
 Andrew G. Howard, Menglong Zhu, Bo Chen, Dmitry Kalenichenko, Weijun Wang,
