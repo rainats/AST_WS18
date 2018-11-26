@@ -7,7 +7,7 @@ Modern robots are equiped with differnt modalities(sensors). These help the
 robot to perceive the environment and make decisions. For example the Toyota
 HSR has the following modalities.
 
-![images/hsr.jpg](HSR modalities. (Source: toyota-global.com))
+!(images/hsr.jpg)[HSR modalities. (Source: toyota-global.com)]
 
 
 1. RGBD camera
@@ -58,7 +58,7 @@ differnent modalities passed through different algorithms.
 
 ## Requirements:
 
-1. Nov 27 : [initial_requirement.md](Intial Requirement)
+1. Nov 27 : (initial_requirement.md)[Intial Requirement]
 2. Dec 4
 3. Dec 11
 4. Dec 18
