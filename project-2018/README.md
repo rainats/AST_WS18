@@ -7,7 +7,7 @@ Modern robots are equiped with differnt modalities(sensors). These help the
 robot to perceive the environment and make decisions. For example the Toyota
 HSR has the following modalities.
 
-!(images/hsr.jpg)[HSR modalities. (Source: toyota-global.com)]
+![HSR modalities. (Source: toyota-global.com)](./images/hsr.jpg)
 
 
 1. RGBD camera
@@ -34,8 +34,8 @@ based on the different modalities
 
 
 Based on the modality and the algorithm used they produce a list of perceived objects:
-1. RGBD camera : [(bottle,1, 99%), (cup, 2, 65%), (knife, 2, 33%) )
-1. RGB camera : [(bottle,1, 55%), (cup, 2, 95%), (fork, 2, 99%) )
+1. RGBD camera : [(bottle,1, 99%), (cup, 2, 65%), (knife, 3, 33%) )]
+1. RGB camera : [(bottle,1, 55%), (cup, 2, 95%), (fork, 3, 99%) )]
 
 The list is a tuple of 3, explaining the following:
 1. Object Name
@@ -58,7 +58,7 @@ differnent modalities passed through different algorithms.
 
 ## Requirements:
 
-1. Nov 27 : (initial_requirement.md)[Intial Requirement]
+1. Nov 27 : [Intial Requirement](initial_requirement.md)
 2. Dec 4
 3. Dec 11
 4. Dec 18
