@@ -36,8 +36,8 @@ based on the different modalities
 Based on the modality and the algorithm used they produce a list of perceived objects.
 For example the robot standing in front of the table and perceiving the table
 ![Robot view table](./images/table_objects.jpg)
-1. RGBD camera : [(bottle,1, 99%), (cup, 2, 65%), (knife, 3, 33%) )]
-1. RGB camera : [(bottle,1, 55%), (cup, 2, 95%), (fork, 3, 99%) )]
+1. RGBD camera : [(knife,1, 99%), (scissor, 2, 65%), (spoon, 3, 33%), (spoon, 4, 80%), (keys, 5, 95%)]
+2. RGB camera : [(knife,1, 55%), (scissor, 2, 95%), (fork, 3, 99%), (spoon, 4, 99%), (keys, 5, 95%) ]
 
 The list is a tuple of 3, explaining the following:
 1. Object Name
