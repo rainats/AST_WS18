@@ -24,3 +24,14 @@ Given a list of object from different modalities combine them to create a combin
 
 
 ## Things to read
+1. Design Patterns
+2. S.O.L.I.D framework for software development
+
+
+## Points
+* 10 Working in group
+* 10 Working with issues in github (converting requirements to github issues, commiting to them and closing them on completion)
+* 10 Working with branch and using pull request to update the master code(No commit to master code)
+* 40 TDD appraoch
+* 10 Using Design Patterns
+* 20 Solution
