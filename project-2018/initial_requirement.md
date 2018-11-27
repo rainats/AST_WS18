@@ -1,6 +1,13 @@
 # Initial Requirement
 
-Given a list of object from different modalities combine them to create a combined list
+Given a list of object from different modalities combine them to create a combined list.
+
+Given the input :
+1. [(knife,1, 99%), (scissor, 2, 65%), (spoon, 3, 33%), (spoon, 4, 80%), (keys, 5, 95%)]
+2. [(knife,1, 55%), (scissor, 2, 95%), (fork, 3, 99%), (spoon, 4, 99%), (keys, 5, 95%) ]
+
+The program should output
+1. [(knife,1, 99%), (scissor, 2, 95%), (fork, 3, 99%), (spoon, 4, 99%), (keys, 5, 95%)]
 
 ## Break down of requirements
 1. Select language of working 
