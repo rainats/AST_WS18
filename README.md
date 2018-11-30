@@ -1,13 +1,17 @@
-# AST_WS18
-Advanced Software Technology class Winter Semester 2018, HBRS
-
-This is a forum to share the group assignment in AST
-Development branch
-=======
-# Advanced Software Technology
+# Advanced Software Technology - Project 2018
 
 ## Overview
 
 Repository for doing lab works of AST
 
-## [Lab 02](basics-02/README.md)
+Team members:
+1. Raina Thomas
+2. Oumaima Tiati
+3. Desiana Dien Nurchalifah
+
+Initial Requirements:
+1. Code language			: Java
+2. Coding standard			: Eclipse
+3. Testing framework		: JUnit
+4. Data structure			: Array of objects
+5. Input and output format	: Array of objects
