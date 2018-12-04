@@ -24,6 +24,7 @@ for object recognition tasks.
 2. RGB-D Object Detection and Semantic Segmentation for Autonomous Manipulation in Clutter [2]
 
 So now we have info from 4 different input sources:
+
 | Sensor 1 (algo 1) | Sensor 1 (algo 2)|  sensor 2 (algo 1) | sensor 2 (algo 2)|
 |-------------------|------------------|--------------------|------------------|
 |[(knife, 1, 89%)]  | [(knife, 1, 35%)] | [(knife, 1, 69%)] | [(knife, 1, 80%)]|
