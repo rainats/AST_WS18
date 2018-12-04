@@ -3,7 +3,7 @@
 We have deployed your code on the robot. And the robot has diven the following real data.
 
 | sensor 1 input | sensor 2 input |
-| ===============|================|
+|----------------|----------------|
 |[(knife,1, 99%), (scissor, 2, 65%), (spoon, 3, 33%), (spoon, 4, 80%), (keys, 5, 95%)] | [ (keys, 5, 95%), (spoon, 4, 99%),(fork, 3, 99%), (scissor, 2, 95%),  (knife,1, 55%)]|
 | [empty list] | [empty list] |
 | [(knife,1, 99%), (scissor, 2, 65%), (spoon, 3, 33%)] | [empty list] |
@@ -25,7 +25,7 @@ for object recognition tasks.
 
 So now we have info from 4 different input sources:
 | Sensor 1 (algo 1) | Sensor 1 (algo 2)|  sensor 2 (algo 1) | sensor 2 (algo 2)|
-|===================|==================|====================|==================|
+|-------------------|------------------|--------------------|------------------|
 |[(knife, 1, 89%)]  | [(knife, 1, 35%)] | [(knife, 1, 69%)] | [(knife, 1, 80%)]|
 
 ## Task
