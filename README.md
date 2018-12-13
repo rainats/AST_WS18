@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/rainats/AST_WS18.png?branch=dev)](https://travis-ci.com/rainats/AST_WS18)
 # Advanced Software Technology - Project 2018
 
 ## Overview
