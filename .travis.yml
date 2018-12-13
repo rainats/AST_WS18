@@ -1,5 +1,5 @@
 language: java
-rvm:
- - 1.8.0_181
- - junit
+jdk:
+  - oraclejdk8
 
+script: ant build
