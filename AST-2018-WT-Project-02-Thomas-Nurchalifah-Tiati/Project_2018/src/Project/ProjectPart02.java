@@ -6,7 +6,7 @@ public class ProjectPart02 {
 	
 	public ArrayList<Objects> ppart02(Objects[] array1,Objects[] array2){
 		
-		comparator a = new comparator();
+	comparator a = new comparator();
     	ArrayList<Objects> result_array = new ArrayList<Objects>();	
     	result_array = a.Compare(array1,array2);    
     	Objects[] temp = result_array.toArray(new Objects[result_array.size()]);
